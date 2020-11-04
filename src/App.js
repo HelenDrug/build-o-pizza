@@ -1,6 +1,6 @@
 function App() {
   return (
-    <div></div>
+    <div>This is some content</div>
   );
 }
 
