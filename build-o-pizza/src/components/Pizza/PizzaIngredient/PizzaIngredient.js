@@ -1,4 +1,5 @@
 import classes from "./PizzaIngredient.css";
+import PropTypes from "prop-types";
 
 const PizzaIndregient = (props) => {
   let ingredient = null;
@@ -89,19 +90,40 @@ const PizzaIndregient = (props) => {
     case "green-pepper":
       ingredient = (
         <>
-          <div className={`${classes.Pepper} ${classes.GreenPepperOne}`}>1</div>;
-          <div className={`${classes.Pepper} ${classes.GreenPepperTwo}`}>1</div>;
-          <div className={`${classes.Pepper} ${classes.GreenPepperThree}`}>1</div>;
-          <div className={`${classes.Pepper} ${classes.GreenPepperFour}`}>1</div>;
-          <div className={`${classes.Pepper} ${classes.GreenPepperFive}`}>1</div>;
-          <div className={`${classes.Pepper} ${classes.GreenPepperSix}`}>1</div>;
-          <div className={`${classes.Pepper} ${classes.GreenPepperSeven}`}>1</div>;
-          <div className={`${classes.Pepper} ${classes.GreenPepperEight}`}>1</div>;
-          <div className={`${classes.Pepper} ${classes.GreenPepperNine}`}>1</div>;
-          <div className={`${classes.Pepper} ${classes.GreenPepperTen}`}>1</div>;
+          <div className={`${classes.Pepper} ${classes.GreenPepperOne}`}></div>;
+          <div className={`${classes.Pepper} ${classes.GreenPepperTwo}`}></div>;
+          <div
+            className={`${classes.Pepper} ${classes.GreenPepperThree}`}
+          ></div>
+          ;
+          <div className={`${classes.Pepper} ${classes.GreenPepperFour}`}></div>
+          ;
+          <div className={`${classes.Pepper} ${classes.GreenPepperFive}`}></div>
+          ;<div className={`${classes.Pepper} ${classes.GreenPepperSix}`}></div>
+          ;
+          <div
+            className={`${classes.Pepper} ${classes.GreenPepperSeven}`}
+          ></div>
+          ;
+          <div
+            className={`${classes.Pepper} ${classes.GreenPepperEight}`}
+          ></div>
+          ;
+          <div className={`${classes.Pepper} ${classes.GreenPepperNine}`}></div>
+          ;<div className={`${classes.Pepper} ${classes.GreenPepperTen}`}></div>
+          ;
         </>
       );
+      break;
+    default:
+      ingredient = null;
   }
+
+  return ingredient;
 };
+
+PizzaIndregient.propTypes = {
+    type = PropTypes.string.isRequired
+}
 
 export default PizzaIndregient;
