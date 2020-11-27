@@ -1,0 +1,248 @@
+.PizzaBottom {
+  margin: 15px auto;
+  width: 702px;
+  height: 702px;
+  overflow: hidden;
+  position: relative;
+}
+.Sauce {
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  border-radius: 720px;
+  background: #640d15;
+  margin: 40px 0 0 40px;
+  box-shadow: inset 0 0 10px #dd2f25;
+}
+.Cheese {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 700px;
+  background: #f3d255;
+  margin: 50px 0 0 50px;
+  z-index: 10;
+  box-shadow: inset 0 0 1000px #d88e24;
+}
+.Pepperoni {
+  position: absolute;
+  width: 80px;
+  height: 70px;
+  border-radius: 60px;
+  background: #b3241c;
+  z-index: 15;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 10px;
+  box-shadow: inset 0 0 85px #711712;
+  border: 2px solid #871b15;
+  text-indent: -9999px;
+  color: #fff;
+}
+.PepOne {
+  margin: 60px 0 0 305px;
+}
+.PepTwo {
+  margin: 75px 0 0 390px;
+}
+.PepThree {
+  margin: 115px 0 0 470px;
+}
+.PepFour {
+  margin: 190px 0 0 525px;
+}
+.PepFive {
+  margin: 275px 0 0 555px;
+}
+.PepSix {
+  margin: 365px 0 0 550px;
+}
+.PepSeven {
+  margin: 450px 0 0 515px;
+}
+.PepEight {
+  margin: 515px 0 0 450px;
+}
+.PepNine {
+  margin: 555px 0 0 365px;
+}
+.PepTen {
+  margin: 560px 0 0 270px;
+}
+
+.Mushroom {
+  position: absolute;
+  width: 70px;
+  height: 75px;
+  z-index: 20;
+  margin: 200px 0 0 200px;
+  text-indent: -9999px;
+}
+
+.Cap {
+  width: 70px;
+  height: 35px;
+  background: #b49989;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  z-index: 20;
+  position: relative;
+}
+.Stem {
+  width: 35px;
+  height: 35px;
+  background: #c3b5ae;
+  margin-left: 17px;
+  margin-top: -10px;
+}
+.MushroomOne {
+  margin: 367px 0 0 122px;
+  -webkit-transform: rotate(22deg);
+  -moz-transform: rotate(22deg);
+  -o-transform: rotate(22deg);
+  transform: rotate(22deg);
+}
+.MushroomTwo {
+  margin: 229px 0 0 170px;
+  -webkit-transform: rotate(-47deg);
+  -moz-transform: rotate(-47deg);
+  -o-transform: rotate(-47deg);
+  transform: rotate(-47deg);
+}
+.MushroomThree {
+  margin: 307px 0 0 201px;
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+.MushroomFour {
+  margin: 127px 0 0 335px;
+  -webkit-transform: rotate(67deg);
+  -moz-transform: rotate(67deg);
+  -o-transform: rotate(67deg);
+  transform: rotate(67deg);
+}
+.MushroomFive {
+  margin: 215px 0 0 340px;
+  -webkit-transform: rotate(-86deg);
+  -moz-transform: rotate(-86deg);
+  -o-transform: rotate(-86deg);
+  transform: rotate(-86deg);
+}
+.MushroomSix {
+  margin: 301px 0 0 290px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.MushroomSeven {
+  margin: 417px 0 0 320px;
+  -webkit-transform: rotate(-101deg);
+  -moz-transform: rotate(-101deg);
+  -o-transform: rotate(-101deg);
+  transform: rotate(-101deg);
+}
+.MushroomEight {
+  margin: 507px 0 0 304px;
+  -webkit-transform: rotate(289deg);
+  -moz-transform: rotate(289deg);
+  -o-transform: rotate(289deg);
+  transform: rotate(289deg);
+}
+.MushroomNine {
+  margin: 507px 0 0 381px;
+  -webkit-transform: rotate(133deg);
+  -moz-transform: rotate(133deg);
+  -o-transform: rotate(133deg);
+  transform: rotate(133deg);
+}
+.MushroomTen {
+  margin: 427px 0 0 381px;
+  -webkit-transform: rotate(115deg);
+  -moz-transform: rotate(115deg);
+  -o-transform: rotate(115deg);
+  transform: rotate(115deg);
+}
+
+.Pepper {
+  position: absolute;
+  width: 20px;
+  height: 45px;
+  background: #2f5e20;
+  box-shadow: 2px 2px 2px rgba(66, 132, 45, 0.9);
+  margin: 250px 0 0 400px;
+  z-index: 30;
+}
+
+.GreenPepperOne {
+  margin: 200px 0 0 100px;
+  -webkit-transform: rotate(22deg);
+  -moz-transform: rotate(22deg);
+  -o-transform: rotate(22deg);
+  transform: rotate(22deg);
+}
+.GreenPepperTwo {
+  margin: 450px 0 0 500px;
+  -webkit-transform: rotate(-47deg);
+  -moz-transform: rotate(-47deg);
+  -o-transform: rotate(-47deg);
+  transform: rotate(-47deg);
+}
+.GreenPepperThree {
+  margin: 195px 0 0 200px;
+  -webkit-transform: rotate(115deg);
+  -moz-transform: rotate(115deg);
+  -o-transform: rotate(115deg);
+  transform: rotate(115deg);
+}
+.GreenPepperFour {
+  margin: 90px 0 0 300px;
+  -webkit-transform: rotate(67deg);
+  -moz-transform: rotate(67deg);
+  -o-transform: rotate(67deg);
+  transform: rotate(67deg);
+}
+.GreenPepperFive {
+  margin: 500px 0 0 300px;
+  -webkit-transform: rotate(-86deg);
+  -moz-transform: rotate(-86deg);
+  -o-transform: rotate(-86deg);
+  transform: rotate(-86deg);
+}
+.GreenPepperSix {
+  margin: 300px 0 0 200px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.GreenPepperSeven {
+  margin: 340px 0 0 295px;
+  -webkit-transform: rotate(-47deg);
+  -moz-transform: rotate(-47deg);
+  -o-transform: rotate(-47deg);
+  transform: rotate(-47deg);
+}
+.GreenPepperEight {
+  margin: 500px 0 0 150px;
+  -webkit-transform: rotate(115deg);
+  -moz-transform: rotate(115deg);
+  -o-transform: rotate(115deg);
+  transform: rotate(115deg);
+}
+.GreenPepperNine {
+  margin: 300px 0 0 100px;
+  -webkit-transform: rotate(67deg);
+  -moz-transform: rotate(67deg);
+  -o-transform: rotate(67deg);
+  transform: rotate(67deg);
+}
+.GreenPepperTen {
+  margin: 400px 0 0 200px;
+  -webkit-transform: rotate(289deg);
+  -moz-transform: rotate(289deg);
+  -o-transform: rotate(289deg);
+  transform: rotate(289deg);
+}
