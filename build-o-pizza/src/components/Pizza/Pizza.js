@@ -5,7 +5,7 @@ const Pizza = ({ ingredients }) => {
  
   let ingredientsArray = Object.keys(ingredients).map((item) => {
     return [ingredients[item]].map((elem, index) => {
-      return <PizzaIngredient key={item + index} type={item} />;
+      return <PizzaIngredient key={item + index} type={item} quantity={elem} />;
     });
   });
 

@@ -1,31 +1,48 @@
 import classes from "./PizzaIngredient.module.css";
-import PropTypes from "prop-types";
-import PizzaBottom from "./PizzaBottom/PizzaBottom.js";
+import { useState } from "react";
+import PizzaBottom from "./PizzaBottom/PizzaBottom";
+import Sauce from "./Sauce/Sauce";
+import Pepperoni from "./Pepperoni/Pepperoni";
 
-const PizzaIndregient = (props) => {
+const PizzaIndregient = ({ type, quantity, children }) => {
+  const [pepMargin, setPepMargin] = useState([
+    "55px 0 0 135px",
+    "35px 0 0 260px",
+    "135px 0 0 50px",
+    "250px 0 0 35px",
+    "360px 0 0 75px",
+    "85px 0 0 360px",
+    "180px 0 0 415px",
+    "285px 0 0 400px",
+    "400px 0 0 320px",
+    "420px 0 0 180px",
+  ]);
+
+  const calculateMargins = (quantity) => {
+    let MarginsArray = [...pepMargin];
+    let newMarginsArray = [];
+    for (let i = 0; i < quantity; ++i) {
+      newMarginsArray.push(MarginsArray[i]);
+    }
+    return newMarginsArray;
+  };
+
   let ingredient = null;
 
-  switch (props.type) {
+  switch (type) {
     case "pizzaBottom":
       ingredient = (
         <PizzaBottom>
-          <div className={classes.Sauce}>{props.children}</div>
+          <Sauce>{children}</Sauce>
         </PizzaBottom>
       );
       break;
     case "pepperoni":
       ingredient = (
         <>
-          <div className={`${classes.Pepperoni} ${classes.PepOne}`}>1</div>
-          <div className={`${classes.Pepperoni} ${classes.PepTwo}`}>1</div>
-          <div className={`${classes.Pepperoni} ${classes.PepThree}`}>1</div>
-          <div className={`${classes.Pepperoni} ${classes.PepFour}`}>1</div>
-          <div className={`${classes.Pepperoni} ${classes.PepFive}`}>1</div>
-          <div className={`${classes.Pepperoni} ${classes.PepSix}`}>1</div>
-          <div className={`${classes.Pepperoni} ${classes.PepSeven}`}>1</div>
-          <div className={`${classes.Pepperoni} ${classes.PepEight}`}>1</div>
-          <div className={`${classes.Pepperoni} ${classes.PepNine}`}>1</div>
-          <div className={`${classes.Pepperoni} ${classes.PepTen}`}>1</div>
+          {calculateMargins(quantity).map((margin) => {
+            return <Pepperoni pepMargin={margin}>1</Pepperoni>;
+          })}
         </>
       );
 
