@@ -1,5 +1,6 @@
 import classes from "./PizzaIngredient.module.css";
 import PropTypes from "prop-types";
+import PizzaBottom from "./PizzaBottom/PizzaBottom.js";
 
 const PizzaIndregient = (props) => {
   let ingredient = null;
@@ -7,9 +8,9 @@ const PizzaIndregient = (props) => {
   switch (props.type) {
     case "pizzaBottom":
       ingredient = (
-        <div className={classes.PizzaBottom}>
+        <PizzaBottom>
           <div className={classes.Sauce}>{props.children}</div>
-        </div>
+        </PizzaBottom>
       );
       break;
     case "pepperoni":

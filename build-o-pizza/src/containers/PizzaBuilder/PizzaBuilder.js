@@ -4,10 +4,9 @@ import { useState } from "react";
 const PizzaBuilder = () => {
   const [pizza, setPizza] = useState({
     ingredients: {
-      pizzaBotom: 1,
-      pepperoni: 1,
+      pepperoni: 2,
       cheese: 1,
-      mushroom: 1,
+      mushroom: 3,
       greenPepper: 1,
     },
   });
