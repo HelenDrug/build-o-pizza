@@ -1,5 +1,7 @@
-import classes from "./PizzaBottom.module.css";
+import RoundPizzaBottom from "./RoundPizzaBottom";
 
-export default function PizzaBottom ({ children }){
-  return <div className={classes.PizzaBottom}>{children}</div>;
+const PizzaBottom = ({ children }) => {
+  return <RoundPizzaBottom>{children}</RoundPizzaBottom>;
 };
+
+export default PizzaBottom;

@@ -2,6 +2,7 @@ import classes from "./PizzaIngredient.module.css";
 import { useState } from "react";
 import PizzaBottom from "./PizzaBottom/PizzaBottom";
 import Sauce from "./Sauce/Sauce";
+import Cheese from "./Cheese/Cheese";
 import Pepperoni from "./Pepperoni/Pepperoni";
 
 const PizzaIndregient = ({ type, quantity, children }) => {
@@ -131,7 +132,7 @@ const PizzaIndregient = ({ type, quantity, children }) => {
       break;
 
     case "cheese":
-      ingredient = <div className={classes.Cheese}></div>;
+      ingredient = <Cheese></Cheese>;
       break;
     default:
       ingredient = null;

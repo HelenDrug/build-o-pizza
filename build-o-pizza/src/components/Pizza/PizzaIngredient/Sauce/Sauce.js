@@ -1,5 +1,7 @@
-import classes from "./Sauce.module.css";
+import TomatoSauce from "./TomatoSauce";
 
-export default function Sauce({ children }) {
-  return <div className={classes.Sauce}>{children}</div>;
-}
+const Sauce = ({ children }) => {
+  return <TomatoSauce>{children}</TomatoSauce>;
+};
+
+export default Sauce;
