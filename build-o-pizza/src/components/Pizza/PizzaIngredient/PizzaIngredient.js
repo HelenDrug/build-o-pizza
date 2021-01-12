@@ -6,7 +6,7 @@ import Cheese from "./Cheese/Cheese";
 import Pepperoni from "./Pepperoni/Pepperoni";
 
 const PizzaIndregient = ({ type, quantity, children }) => {
-  const [pepMargin, setPepMargin] = useState([
+  const [pepperoniMargin, setPepperoniMargin] = useState([
     "55px 0 0 135px",
     "35px 0 0 260px",
     "135px 0 0 50px",
@@ -19,8 +19,21 @@ const PizzaIndregient = ({ type, quantity, children }) => {
     "420px 0 0 180px",
   ]);
 
-  const calculateMargins = (quantity) => {
-    let MarginsArray = [...pepMargin];
+  const [pepperMargin, setPepperMargin] = useState([
+    { margin: "200px 0 0 100px", transform: "22deg" },
+    { margin: "250px 0 0 300px", transform: "-47deg" },
+    { margin: "195px 0 0 200px", transform: "115deg" },
+    { margin: "90px 0 0 300px", transform: "67deg" },
+    { margin: "120px 0 0 150px", transform: "-86deg" },
+    { margin: "300px 0 0 200px", transform: "0deg" },
+    { margin: "340px 0 0 295px", transform: "-47deg" },
+    { margin: "200px 0 0 380px", transform: "115deg" },
+    { margin: "300px 0 0 100px", transform: "67deg" },
+    { margin: "400px 0 0 200px", transform: "289deg" },
+  ]);
+
+  const filteredMargin = (quantity, array) => {
+    let MarginsArray = [...array];
     let newMarginsArray = [];
     for (let i = 0; i < quantity; ++i) {
       newMarginsArray.push(MarginsArray[i]);
@@ -41,7 +54,7 @@ const PizzaIndregient = ({ type, quantity, children }) => {
     case "pepperoni":
       ingredient = (
         <>
-          {calculateMargins(quantity).map((margin) => {
+          {filteredMargin(quantity, pepperoniMargin).map((margin) => {
             return <Pepperoni pepMargin={margin}>1</Pepperoni>;
           })}
         </>
@@ -51,6 +64,7 @@ const PizzaIndregient = ({ type, quantity, children }) => {
     case "mushroom":
       ingredient = (
         <>
+          {filteredMargin(quantity)}
           <div className={`${classes.Mushroom} ${classes.MushroomOne}`}>
             <div className={classes.Cap}></div>
             <div className={classes.Stem}></div>
