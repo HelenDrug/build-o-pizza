@@ -7,7 +7,7 @@ const PizzaBuilder = () => {
       pepperoni: 10,
       cheese: 1,
       mushroom: 3,
-      greenPepper: 1,
+      greenPepper: 10,
     },
   });
   return (

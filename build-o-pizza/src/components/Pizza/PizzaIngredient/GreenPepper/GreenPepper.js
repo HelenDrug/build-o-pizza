@@ -1,9 +1,10 @@
 import SimplePepper from "./SimplePepper";
 
 const GreenPepper = ({ pepperMargin, pepperTransform }) => {
+  console.log(pepperMargin);
   return (
     <SimplePepper
-      peperMargin={pepperMargin}
+      pepperMargin={pepperMargin}
       pepperTransform={pepperTransform}
     ></SimplePepper>
   );

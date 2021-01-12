@@ -4,6 +4,7 @@ import PizzaBottom from "./PizzaBottom/PizzaBottom";
 import Sauce from "./Sauce/Sauce";
 import Cheese from "./Cheese/Cheese";
 import Pepperoni from "./Pepperoni/Pepperoni";
+import GreenPepper from "./GreenPepper/GreenPepper";
 
 const PizzaIndregient = ({ type, quantity, children }) => {
   const [pepperoniMargin, setPepperoniMargin] = useState([
@@ -64,7 +65,6 @@ const PizzaIndregient = ({ type, quantity, children }) => {
     case "mushroom":
       ingredient = (
         <>
-          {filteredMargin(quantity)}
           <div className={`${classes.Mushroom} ${classes.MushroomOne}`}>
             <div className={classes.Cap}></div>
             <div className={classes.Stem}></div>
@@ -120,27 +120,14 @@ const PizzaIndregient = ({ type, quantity, children }) => {
     case "greenPepper":
       ingredient = (
         <>
-          <div className={`${classes.Pepper} ${classes.GreenPepperOne}`}></div>
-          <div className={`${classes.Pepper} ${classes.GreenPepperTwo}`}></div>
-          <div
-            className={`${classes.Pepper} ${classes.GreenPepperThree}`}
-          ></div>
-
-          <div className={`${classes.Pepper} ${classes.GreenPepperFour}`}></div>
-
-          <div className={`${classes.Pepper} ${classes.GreenPepperFive}`}></div>
-          <div className={`${classes.Pepper} ${classes.GreenPepperSix}`}></div>
-
-          <div
-            className={`${classes.Pepper} ${classes.GreenPepperSeven}`}
-          ></div>
-
-          <div
-            className={`${classes.Pepper} ${classes.GreenPepperEight}`}
-          ></div>
-
-          <div className={`${classes.Pepper} ${classes.GreenPepperNine}`}></div>
-          <div className={`${classes.Pepper} ${classes.GreenPepperTen}`}></div>
+          {filteredMargin(quantity, pepperMargin).map((margin) => {
+            return (
+              <GreenPepper
+                pepperMargin={margin.margin}
+                pepperTransform={margin.transform}
+              ></GreenPepper>
+            );
+          })}
         </>
       );
       break;

@@ -8,8 +8,8 @@ const SimplePepper = styled.div`
   box-shadow: 2px 2px 2px rgba(66, 132, 45, 0.9);
   margin: 250px 0 0 400px;
   z-index: 30;
-  margin:${props => props.pepperMargin};
-  transform: ${props => props.pepperTransform};
+  margin: ${(props) => props.pepperMargin};
+  transform: rotate(${(props) => props.pepperTransform});
 `;
 
 export default SimplePepper;

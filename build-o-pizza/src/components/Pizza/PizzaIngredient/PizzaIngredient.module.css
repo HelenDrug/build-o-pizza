@@ -95,16 +95,6 @@
   transform: rotate(115deg);
 }
 
-.Pepper {
-  position: absolute;
-  width: 20px;
-  height: 45px;
-  background: #2f5e20;
-  box-shadow: 2px 2px 2px rgba(66, 132, 45, 0.9);
-  margin: 250px 0 0 400px;
-  z-index: 30;
-}
-
 .GreenPepperOne {
   margin: 200px 0 0 100px;
   -webkit-transform: rotate(22deg);
