@@ -5,6 +5,7 @@ import Sauce from "./Sauce/Sauce";
 import Cheese from "./Cheese/Cheese";
 import Pepperoni from "./Pepperoni/Pepperoni";
 import GreenPepper from "./GreenPepper/GreenPepper";
+import Mushroom from "./Mushroom/Mushroom";
 
 const PizzaIndregient = ({ type, quantity, children }) => {
   const [pepperoniMargin, setPepperoniMargin] = useState([
@@ -31,6 +32,14 @@ const PizzaIndregient = ({ type, quantity, children }) => {
     { margin: "200px 0 0 380px", transform: "115deg" },
     { margin: "300px 0 0 100px", transform: "67deg" },
     { margin: "400px 0 0 200px", transform: "289deg" },
+  ]);
+
+  const [mushroomMargin, setMushroomMargin] = useState([
+    { margin: "167px 0 0 122px", transform: "22deg" },
+    { margin: "100px 0 0 230px", transform: "-47deg" },
+    { margin: "357px 0 0 201px", transform: "15deg" },
+    { margin: "157px 0 0 335px", transform: "67deg" },
+    { margin: "215px 0 0 340px", transform: "-86deg" },
   ]);
 
   const filteredMargin = (quantity, array) => {
@@ -65,54 +74,16 @@ const PizzaIndregient = ({ type, quantity, children }) => {
     case "mushroom":
       ingredient = (
         <>
-          <div className={`${classes.Mushroom} ${classes.MushroomOne}`}>
-            <div className={classes.Cap}></div>
-            <div className={classes.Stem}></div>
-          </div>
-          <div className={`${classes.Mushroom} ${classes.MushroomTwo}`}>
-            <div className={classes.Cap}></div>
-            <div className={classes.Stem}></div>
-          </div>
-
-          <div className={`${classes.Mushroom} ${classes.MushroomThree}`}>
-            <div className={classes.Cap}></div>
-            <div className={classes.Stem}></div>
-          </div>
-
-          <div className={`${classes.Mushroom} ${classes.MushroomFour}`}>
-            <div className={classes.Cap}></div>
-            <div className={classes.Stem}></div>
-          </div>
-
-          <div className={`${classes.Mushroom} ${classes.MushroomFive}`}>
-            <div className={classes.Cap}></div>
-            <div className={classes.Stem}></div>
-          </div>
-
-          <div className={`${classes.Mushroom} ${classes.MushroomSix}`}>
-            <div className={classes.Cap}></div>
-            <div className={classes.Stem}></div>
-          </div>
-
-          <div className={`${classes.Mushroom} ${classes.MushroomSeven}`}>
-            <div className={classes.Cap}></div>
-            <div className={classes.Stem}></div>
-          </div>
-
-          <div className={`${classes.Mushroom} ${classes.MushroomEight}`}>
-            <div className={classes.Cap}></div>
-            <div className={classes.Stem}></div>
-          </div>
-
-          <div className={`${classes.Mushroom} ${classes.MushroomNine}`}>
-            <div className={classes.Cap}></div>
-            <div className={classes.Stem}></div>
-          </div>
-
-          <div className={`${classes.Mushroom} ${classes.MushroomTen}`}>
-            <div className={classes.Cap}></div>
-            <div className={classes.Stem}></div>
-          </div>
+          {filteredMargin(quantity, mushroomMargin).map((margin) => {
+            return (
+              <Mushroom
+                mushroomMargin={margin.margin}
+                mushroomTransform={margin.transform}
+              >
+                1
+              </Mushroom>
+            );
+          })}
         </>
       );
       break;
@@ -125,7 +96,9 @@ const PizzaIndregient = ({ type, quantity, children }) => {
               <GreenPepper
                 pepperMargin={margin.margin}
                 pepperTransform={margin.transform}
-              ></GreenPepper>
+              >
+                1
+              </GreenPepper>
             );
           })}
         </>
