@@ -1,4 +1,4 @@
-import StyledBuildControls from "./StyledBuildControls";
+import { StyledBuildControls } from "./StyledBuildControls";
 import {BuildControl} from "./BuildControl/BuildControl";
 
 const controlLabels = [
@@ -11,7 +11,7 @@ export const BuildControls = () => {
   return (
     <StyledBuildControls>
       {controlLabels.map((label) => {
-        <BuildControl key={label.label} label={label.label} />;
+        return <BuildControl key={label.label} label={label.label} />;
       })}
     </StyledBuildControls>
   );
