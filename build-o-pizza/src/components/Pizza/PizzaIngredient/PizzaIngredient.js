@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import PizzaBottom from "./PizzaBottom/PizzaBottom";
 import Sauce from "./Sauce/Sauce";
@@ -40,11 +39,11 @@ const PizzaIndregient = ({ type, quantity, children }) => {
     { margin: "357px 0 0 201px", transform: "15deg" },
     { margin: "157px 0 0 335px", transform: "67deg" },
     { margin: "215px 0 0 340px", transform: "-86deg" },
-    {margin: "331px 0 0 290px", transform: "0deg"},
-    {margin: "257px 0 0 120px", transform: "-101deg"},
-    {margin: "207px 0 0 204px", transform: "289deg"},
-    {margin: "150px 0 0 231px", transform: "133de"},
-    {margin: "220px 0 0 251px", transform: "115deg"}
+    { margin: "331px 0 0 290px", transform: "0deg" },
+    { margin: "257px 0 0 120px", transform: "-101deg" },
+    { margin: "207px 0 0 204px", transform: "289deg" },
+    { margin: "150px 0 0 231px", transform: "133de" },
+    { margin: "220px 0 0 251px", transform: "115deg" },
   ]);
 
   const filteredMargin = (quantity, array) => {
@@ -69,8 +68,12 @@ const PizzaIndregient = ({ type, quantity, children }) => {
     case "pepperoni":
       ingredient = (
         <>
-          {filteredMargin(quantity, pepperoniMargin).map((margin) => {
-            return <Pepperoni pepMargin={margin}>1</Pepperoni>;
+          {filteredMargin(quantity, pepperoniMargin).map((margin, idx) => {
+            return (
+              <Pepperoni key={idx} pepMargin={margin}>
+                1
+              </Pepperoni>
+            );
           })}
         </>
       );
@@ -79,9 +82,10 @@ const PizzaIndregient = ({ type, quantity, children }) => {
     case "mushroom":
       ingredient = (
         <>
-          {filteredMargin(quantity, mushroomMargin).map((margin) => {
+          {filteredMargin(quantity, mushroomMargin).map((margin, idx) => {
             return (
               <Mushroom
+                key={idx}
                 mushroomMargin={margin.margin}
                 mushroomTransform={margin.transform}
               >
@@ -96,9 +100,10 @@ const PizzaIndregient = ({ type, quantity, children }) => {
     case "greenPepper":
       ingredient = (
         <>
-          {filteredMargin(quantity, pepperMargin).map((margin) => {
+          {filteredMargin(quantity, pepperMargin).map((margin, idx) => {
             return (
               <GreenPepper
+                key={idx}
                 pepperMargin={margin.margin}
                 pepperTransform={margin.transform}
               >

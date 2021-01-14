@@ -1,5 +1,18 @@
 import StyledBuildControls from "./StyledBuildControls";
+import {BuildControl} from "./BuildControl/BuildControl";
+
+const controlLabels = [
+  { label: "Pepperoni", type: "pepperoni" },
+  { label: "Mushrooms", type: "mushroom" },
+  { label: "Green Pepper", type: "greenPepper" },
+];
 
 export const BuildControls = () => {
-  return <StyledBuildControls></StyledBuildControls>;
+  return (
+    <StyledBuildControls>
+      {controlLabels.map((label) => {
+        <BuildControl key={label.label} label={label.label} />;
+      })}
+    </StyledBuildControls>
+  );
 };

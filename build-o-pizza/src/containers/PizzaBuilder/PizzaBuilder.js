@@ -1,5 +1,6 @@
 import Pizza from "../../components/Pizza/Pizza";
 import { useState } from "react";
+import {BuildControls} from "../../components/Pizza/BuildControls/BuildControls.js";
 
 const PizzaBuilder = () => {
   const [pizza, setPizza] = useState({
@@ -13,7 +14,7 @@ const PizzaBuilder = () => {
   return (
     <>
       <Pizza ingredients={pizza.ingredients} />
-      <div>Build Controls</div>
+      <BuildControls />
     </>
   );
 };
