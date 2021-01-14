@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledBuildControls = styled.div`
+export const StyledBuildControls = styled.div`
   width: 100%;
   background-color: #ffb26b;
   display: flex;
