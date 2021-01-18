@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const SimplePepperoni = styled.div`
   position: absolute;
-  width: 80px;
-  height: 70px;
+  width: 60px;
+  height: 50px;
   border-radius: 60px;
   background: hsl(26, 96%, 18%);
   z-index: 12;

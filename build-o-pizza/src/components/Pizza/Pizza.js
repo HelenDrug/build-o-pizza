@@ -2,20 +2,12 @@ import PizzaIngredient from "./PizzaIngredient/PizzaIngredient";
 import styled from "styled-components";
 
 const StyledPizza = styled.div`
-  width: 100%;
-  height: 100%;
-  margin: auto;
+  width: 500px;
+  height: 500px;
+  margin: 0 2rem 0 2rem;
   text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
-  @media (min-width: 1000px) and (min-height: 700px) {
-    width: 700px;
-    height: 600px;
-  }
-  @media (min-width: 500px) and (min-height: 400px) {
-    width: 450px;
-    height: 400px;
-  }
 `;
 
 const Pizza = ({ ingredients }) => {
@@ -31,10 +23,10 @@ const Pizza = ({ ingredients }) => {
       return array.concat(element);
     }, []);
 
-    //checking that ingredients array is not empty
-    if(ingredientsArray.length === 0){
-      ingredientsArray = <p>Please start adding ingredients!</p>
-    }
+  //checking that ingredients array is not empty
+  if (ingredientsArray.length === 0) {
+    ingredientsArray = <p>Please start adding ingredients!</p>;
+  }
 
   return (
     <StyledPizza>

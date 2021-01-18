@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const StyledBuildControls = styled.div`
-  width: 100%;
+  width: 30%;
+  height: 100%;
   background-color: #ffb26b;
   display: flex;
   flex-flow: column;
   align-items: center;
-  box-shadow: 0 2px 1px #ccc;
-  margin: auto;
+  box-shadow: 0 2px 5px #ccc;
   padding: 10px 0;
 `;

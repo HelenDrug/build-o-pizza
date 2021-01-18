@@ -1,10 +1,15 @@
-import classes from "./Layout.css";
+import styled from "styled-components";
+
+const Content = styled.main`
+  margin-bottom: 16px;
+  display: flex;
+`;
 
 const Layout = ({ children }) => {
   return (
     <>
       <div>ToolBar, Sides, Backdrop</div>
-      <main className={classes.Content}>{children}</main>
+      <Content>{children}</Content>
     </>
   );
 };
