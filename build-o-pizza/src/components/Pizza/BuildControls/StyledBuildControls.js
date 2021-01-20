@@ -7,6 +7,9 @@ export const StyledBuildControls = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-items: center;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px 0;
+  margin-left: 5rem;
+  outline: 1px solid black;
 `;

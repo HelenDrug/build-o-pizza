@@ -4,8 +4,6 @@ import { ButtonAdd } from "./ButtonAdd/ButtonAdd";
 import { ButtonRemove } from "./ButtonRemove/ButtonRemove";
 
 export const BuildControl = ({ label }) => {
-  console.log(label);
-  console.log("we are in BuildControl");
   return (
     <StyledBuildControl>
       <StyledLabel>{label}</StyledLabel>
