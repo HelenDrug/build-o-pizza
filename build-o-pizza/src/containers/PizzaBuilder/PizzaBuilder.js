@@ -11,10 +11,10 @@ const INGREDIENT_PRICE = {
 const PizzaBuilder = () => {
   const [pizza, setPizza] = useState({
     ingredients: {
-      pepperoni: 1,
+      pepperoni: 5,
       cheese: 1,
-      mushroom: 1,
-      greenPepper: 1,
+      mushroom: 5,
+      greenPepper: 5,
     },
     totalPrice: 4,
   });
@@ -32,6 +32,7 @@ const PizzaBuilder = () => {
   };
 
   const addIngredient = (type) => {
+    if (pizza.ingredients[type] >= 10) return;
     const updatedCount = pizza.ingredients[type] + 1; // we take old count and add 1 to it
     const updatedIngredients = { ...pizza.ingredients };
     updatedIngredients[type] = updatedCount;
@@ -63,6 +64,7 @@ const PizzaBuilder = () => {
         ingredientAdded={addIngredient}
         ingredientRemoved={removeIngredient}
         disabled={disabledInfo}
+        price={pizza.totalPrice}
       />
     </>
   );
