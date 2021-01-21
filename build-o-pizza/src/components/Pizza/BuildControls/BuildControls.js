@@ -1,7 +1,7 @@
 import { StyledBuildControls } from "./StyledBuildControls";
 import { BuildControl } from "./BuildControl/BuildControl";
 import { StyledPrice } from "./StyledPrice/StyledPrice";
-import {OrderButton} from "./OrderButton/OrderButton"
+import { OrderButton } from "./OrderButton/OrderButton";
 
 const controlLabels = [
   { label: "Pepperoni", type: "pepperoni" },
