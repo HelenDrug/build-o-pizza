@@ -51,12 +51,18 @@ const PizzaBuilder = () => {
       totalPrice: calculatePrice(type, "REMOVE"),
     });
   };
+
+  const disabledInfo = { ...pizza.ingredients };
+  for (let key in disabledInfo) {
+    disabledInfo[key] = disabledInfo[key] <= 0;
+  }
   return (
     <>
       <Pizza ingredients={pizza.ingredients} />
       <BuildControls
         ingredientAdded={addIngredient}
         ingredientRemoved={removeIngredient}
+        disabled={disabledInfo}
       />
     </>
   );

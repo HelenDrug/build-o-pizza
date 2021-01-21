@@ -7,9 +7,15 @@ const controlLabels = [
   { label: "Green Pepper", type: "greenPepper" },
 ];
 
-export const BuildControls = ({ ingredientAdded, ingredientRemoved }) => {
+export const BuildControls = ({
+  ingredientAdded,
+  ingredientRemoved,
+  disabled,
+  price,
+}) => {
   return (
     <StyledBuildControls>
+      <p>Current price : {price}</p>
       {controlLabels.map((item) => {
         return (
           <BuildControl
@@ -17,6 +23,7 @@ export const BuildControls = ({ ingredientAdded, ingredientRemoved }) => {
             label={item.label}
             ingredientAdded={() => ingredientAdded(item.type)}
             ingredientRemoved={() => ingredientRemoved(item.type)}
+            disabled={disabled[item.type]}
           />
         );
       })}
