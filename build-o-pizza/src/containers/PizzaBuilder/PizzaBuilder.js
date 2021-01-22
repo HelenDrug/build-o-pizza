@@ -11,13 +11,25 @@ const INGREDIENT_PRICE = {
 const PizzaBuilder = () => {
   const [pizza, setPizza] = useState({
     ingredients: {
-      pepperoni: 5,
-      cheese: 1,
-      mushroom: 5,
-      greenPepper: 5,
+      pepperoni: 0,
+      cheese: 0,
+      mushroom: 0,
+      greenPepper: 0,
     },
     totalPrice: 4,
+    canBeBought: false,
   });
+
+  const updateBoughtState = (ingredients) => {
+    const sum = Object.values(ingredients).reduce((sum, el) => {
+      return sum + el;
+    }, 0);
+    setPizza({
+      ingredients: ingredients,
+      totalPrice: pizza.totalPrice,
+      canBeBought: sum > 0,
+    });
+  };
 
   const calculatePrice = (ingredientType, action) => {
     console.log(ingredientType, action);
@@ -40,6 +52,7 @@ const PizzaBuilder = () => {
       ingredients: updatedIngredients,
       totalPrice: calculatePrice(type, "ADD"),
     });
+    updateBoughtState(updatedIngredients);
   };
 
   const removeIngredient = (type) => {
@@ -51,6 +64,7 @@ const PizzaBuilder = () => {
       ingredients: updatedIngredients,
       totalPrice: calculatePrice(type, "REMOVE"),
     });
+    updateBoughtState(updatedIngredients);
   };
 
   const disabledInfo = { ...pizza.ingredients };
@@ -65,6 +79,7 @@ const PizzaBuilder = () => {
         ingredientRemoved={removeIngredient}
         disabled={disabledInfo}
         price={pizza.totalPrice}
+        canBeBought={pizza.canBeBought}
       />
     </>
   );
