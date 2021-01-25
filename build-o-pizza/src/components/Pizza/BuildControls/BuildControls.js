@@ -16,6 +16,7 @@ export const BuildControls = ({
   price,
   canBeBought,
 }) => {
+  console.log(price);
   console.log(canBeBought);
   return (
     <StyledBuildControls>

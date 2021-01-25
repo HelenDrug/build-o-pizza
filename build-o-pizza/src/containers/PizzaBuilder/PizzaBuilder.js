@@ -16,7 +16,7 @@ const PizzaBuilder = () => {
       mushroom: 0,
       greenPepper: 0,
     },
-    totalPrice: 4,
+    totalPrice: 0,
     canBeBought: false,
   });
 
@@ -24,15 +24,10 @@ const PizzaBuilder = () => {
     const sum = Object.values(ingredients).reduce((sum, el) => {
       return sum + el;
     }, 0);
-    setPizza({
-      ingredients: ingredients,
-      totalPrice: pizza.totalPrice,
-      canBeBought: sum > 0,
-    });
+    return sum > 0;
   };
 
   const calculatePrice = (ingredientType, action) => {
-    console.log(ingredientType, action);
     switch (action) {
       case "ADD":
         // Here we take the price for ingredient and add it to total price of pizza
@@ -48,11 +43,12 @@ const PizzaBuilder = () => {
     const updatedCount = pizza.ingredients[type] + 1; // we take old count and add 1 to it
     const updatedIngredients = { ...pizza.ingredients };
     updatedIngredients[type] = updatedCount;
+
     setPizza({
       ingredients: updatedIngredients,
       totalPrice: calculatePrice(type, "ADD"),
+      canBeBought: updateBoughtState(updatedIngredients),
     });
-    updateBoughtState(updatedIngredients);
   };
 
   const removeIngredient = (type) => {
@@ -60,11 +56,12 @@ const PizzaBuilder = () => {
     const updatedCount = pizza.ingredients[type] - 1;
     const updatedIngredients = { ...pizza.ingredients };
     updatedIngredients[type] = updatedCount;
+
     setPizza({
       ingredients: updatedIngredients,
       totalPrice: calculatePrice(type, "REMOVE"),
+      canBeBought: updateBoughtState(updatedIngredients),
     });
-    updateBoughtState(updatedIngredients);
   };
 
   const disabledInfo = { ...pizza.ingredients };
