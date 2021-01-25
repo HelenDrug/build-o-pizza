@@ -1,6 +1,7 @@
 import Pizza from "../../components/Pizza/Pizza";
 import { useState } from "react";
 import { BuildControls } from "../../components/Pizza/BuildControls/BuildControls.js";
+import { Modal } from "../../components/UI/Modal/Modal";
 
 const INGREDIENT_PRICE = {
   pepperoni: 1,
@@ -70,6 +71,7 @@ const PizzaBuilder = () => {
   }
   return (
     <>
+      <Modal />
       <Pizza ingredients={pizza.ingredients} />
       <BuildControls
         ingredientAdded={addIngredient}
