@@ -1,15 +1,19 @@
 import styled from "styled-components";
 
-const List = styled.ul``;
+const List = styled.ul`
+  text-transform: capitalize;
+  list-style-type: none;
+`;
 
 export const OrderContent = ({ ingredients }) => {
-  console.log(ingredients);
   return (
     <List>
       {Object.keys(ingredients).map((item) => {
-        <li>
-          Item : {item}: {ingredients[item]};
-        </li>;
+        return (
+          <li>
+            {item}: {ingredients[item]}
+          </li>
+        );
       })}
     </List>
   );

@@ -6,7 +6,7 @@ export const StyledModal = styled.div`
   background-color: white;
   width: 50%;
   border: 1px solid #ccc;
-  box-shadow: 1px 0px 5px #58391c;
+  box-shadow: 0px 0px 2px #58391c;
   padding: 16px;
   left: 55%;
   top: 60%;

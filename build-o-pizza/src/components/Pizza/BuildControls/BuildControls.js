@@ -16,8 +16,6 @@ export const BuildControls = ({
   price,
   canBeBought,
 }) => {
-  console.log(price);
-  console.log(canBeBought);
   return (
     <StyledBuildControls>
       <StyledPrice>Current price: {price.toFixed(2)}</StyledPrice>
