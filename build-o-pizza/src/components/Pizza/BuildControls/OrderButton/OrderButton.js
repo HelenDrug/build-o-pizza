@@ -5,7 +5,7 @@ export const OrderButton = styled.button`
   outline: none;
   cursor: pointer;
   border: 1px solid #966909;
-  border-radius: 5%;
+  border-radius: 10px;
   color: #966909;
   font-family: inherit;
   font-size: 1em;

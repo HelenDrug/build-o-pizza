@@ -2,18 +2,25 @@ import styled from "styled-components";
 
 export const StyledModal = styled.div`
   position: fixed;
-  z-index: 500;
-  background-color: white;
-  width: 50%;
-  border: 1px solid #ccc;
-  box-shadow: 0px 0px 2px #58391c;
+
+  background-color: #fff;
+  width: 30%;
+  border-radius: 40px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.18);
   padding: 16px;
-  left: 55%;
+  left: 58%;
   top: 60%;
   box-sizing: border-box;
-  transition: all 0.3s ease-out;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.12);
+    transform: scale(1.05);
+    background-color: #a4a8a7;
+    color: #fff;
+  }
+
   @media (min-width: 600px) {
-    width: 500px;
-    left: calc(50% - 10px);
+    left: 58%;
   }
 `;

@@ -2,8 +2,8 @@ import PizzaIngredient from "./PizzaIngredient/PizzaIngredient";
 import styled from "styled-components";
 
 const StyledPizza = styled.div`
-  width: 500px;
-  height: 500px;
+  width: 32rem;
+  height: 32rem;
   margin: 0 2rem 0 2rem;
   text-align: center;
   font-weight: bold;

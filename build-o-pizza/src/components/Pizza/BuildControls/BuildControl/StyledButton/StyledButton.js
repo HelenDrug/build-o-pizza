@@ -7,6 +7,7 @@ export const StyledButton = styled.button`
   margin: 0 5px;
   width: 80px;
   border: 1px solid #2c061f;
+  border-radius: 10px;
   cursor: pointer;
   outline: none;
   :disabled {

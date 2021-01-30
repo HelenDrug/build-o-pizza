@@ -1,20 +1,21 @@
 import styled from "styled-components";
+import { OrderContentItem } from "./OrderContentItem";
 
-const List = styled.ul`
+const OrderContentList = styled.ul`
   text-transform: capitalize;
   list-style-type: none;
 `;
 
 export const OrderContent = ({ ingredients }) => {
   return (
-    <List>
+    <OrderContentList>
       {Object.keys(ingredients).map((item) => {
         return (
-          <li>
+          <OrderContentItem>
             {item}: {ingredients[item]}
-          </li>
+          </OrderContentItem>
         );
       })}
-    </List>
+    </OrderContentList>
   );
 };
