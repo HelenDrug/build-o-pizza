@@ -2,7 +2,7 @@ import Pizza from "../../components/Pizza/Pizza";
 import { useState } from "react";
 import { BuildControls } from "../../components/Pizza/BuildControls/BuildControls.js";
 import { Modal } from "../../components/UI/Modal/Modal";
-import { OrderSummary } from "../../components/Pizza/OrderSummary/OrderSummary";
+import { ControlsWrapper } from "./ControlsWrapper";
 
 const INGREDIENT_PRICE = {
   pepperoni: 1,
@@ -72,15 +72,17 @@ const PizzaBuilder = () => {
   }
   return (
     <>
-      <Modal ingredients={pizza.ingredients} />
       <Pizza ingredients={pizza.ingredients} />
-      <BuildControls
-        ingredientAdded={addIngredient}
-        ingredientRemoved={removeIngredient}
-        disabled={disabledInfo}
-        price={pizza.totalPrice}
-        canBeBought={pizza.canBeBought}
-      />
+      <ControlsWrapper>
+        <BuildControls
+          ingredientAdded={addIngredient}
+          ingredientRemoved={removeIngredient}
+          disabled={disabledInfo}
+          price={pizza.totalPrice}
+          canBeBought={pizza.canBeBought}
+        />
+        <Modal ingredients={pizza.ingredients} />
+      </ControlsWrapper>
     </>
   );
 };

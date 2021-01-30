@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
 export const StyledModal = styled.div`
-  position: fixed;
-
   background-color: #fff;
-  width: 30%;
+  width: 60%;
   border-radius: 40px;
   box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.18);
   padding: 16px;
-  left: 58%;
-  top: 60%;
+  margin: 0 0 2rem 5rem;
   box-sizing: border-box;
   transition: all 0.4s ease;
   cursor: pointer;

@@ -11,9 +11,7 @@ export const OrderContent = ({ ingredients }) => {
     <OrderContentList>
       {Object.keys(ingredients).map((item) => {
         return (
-          <OrderContentItem>
-            {item}: {ingredients[item]}
-          </OrderContentItem>
+          <OrderContentItem ingredient={item} quantity={ingredients[item]} />
         );
       })}
     </OrderContentList>

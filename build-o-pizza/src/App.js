@@ -4,7 +4,7 @@ import PizzaBuilder from "./containers/PizzaBuilder/PizzaBuilder";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Layout>
         <PizzaBuilder />
       </Layout>
