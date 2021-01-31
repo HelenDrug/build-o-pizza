@@ -5,6 +5,7 @@ import Cheese from "./Cheese/Cheese";
 import Pepperoni from "./Pepperoni/Pepperoni";
 import GreenPepper from "./GreenPepper/GreenPepper";
 import Mushroom from "./Mushroom/Mushroom";
+import img from "../../../img/pizza_bottom.png";
 
 const PizzaIndregient = ({ type, quantity, children }) => {
   const [pepperoniMargin, setPepperoniMargin] = useState([
@@ -60,9 +61,10 @@ const PizzaIndregient = ({ type, quantity, children }) => {
   switch (type) {
     case "pizzaBottom":
       ingredient = (
-        <PizzaBottom>
+        <>
+          <PizzaBottom />
           <Sauce>{children}</Sauce>
-        </PizzaBottom>
+        </>
       );
       break;
     case "pepperoni":

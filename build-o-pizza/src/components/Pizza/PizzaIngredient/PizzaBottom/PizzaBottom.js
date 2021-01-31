@@ -1,7 +1,8 @@
 import RoundPizzaBottom from "./RoundPizzaBottom";
+import img from "../../../../img/pizza_bottom.png";
 
-const PizzaBottom = ({ children }) => {
-  return <RoundPizzaBottom>{children}</RoundPizzaBottom>;
+const PizzaBottom = () => {
+  return <RoundPizzaBottom src={img} />;
 };
 
 export default PizzaBottom;
