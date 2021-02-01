@@ -6,7 +6,6 @@ const SimpleCheese = styled.div`
   height: 90%;
   border-radius: 700px;
   margin: 22px 0 0 22px;
-  z-index: 10;
 `;
 
 export default SimpleCheese;

@@ -30,7 +30,9 @@ const Pizza = ({ ingredients }) => {
 
   return (
     <StyledPizza>
-      <PizzaIngredient type="pizzaBottom">{ingredientsArray}</PizzaIngredient>
+      <PizzaIngredient type="pizzaBottom">
+        {ingredientsArray}
+      </PizzaIngredient>
     </StyledPizza>
   );
 };

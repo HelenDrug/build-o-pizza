@@ -117,7 +117,7 @@ const PizzaIndregient = ({ type, quantity, children }) => {
       break;
 
     case "cheese":
-      ingredient = <Cheese></Cheese>;
+      ingredient = <Cheese>{console.log("Cheese from Ingredients")}</Cheese>;
       break;
     default:
       ingredient = null;

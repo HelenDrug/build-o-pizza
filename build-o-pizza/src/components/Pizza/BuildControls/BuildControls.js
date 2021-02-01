@@ -7,6 +7,7 @@ const controlLabels = [
   { label: "Pepperoni", type: "pepperoni" },
   { label: "Mushrooms", type: "mushroom" },
   { label: "Green Pepper", type: "greenPepper" },
+  { label: "Cheese", type: "cheese" },
 ];
 
 export const BuildControls = ({

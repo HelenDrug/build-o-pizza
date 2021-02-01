@@ -1,6 +1,5 @@
 import SimpleMushroom from "./SimpleMushroom";
-import Cap from "./Cap";
-import Stem from "./Stem";
+import img from "../../../../img/mushroom_2.png";
 
 const Mushroom = ({ mushroomMargin, mushroomTransform }) => {
   return (
@@ -8,8 +7,7 @@ const Mushroom = ({ mushroomMargin, mushroomTransform }) => {
       mushroomMargin={mushroomMargin}
       mushroomTransform={mushroomTransform}
     >
-      <Cap></Cap>
-      <Stem></Stem>
+      <img src={img} />
     </SimpleMushroom>
   );
 };
