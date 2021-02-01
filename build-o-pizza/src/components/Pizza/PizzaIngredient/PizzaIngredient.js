@@ -5,7 +5,6 @@ import Cheese from "./Cheese/Cheese";
 import Pepperoni from "./Pepperoni/Pepperoni";
 import GreenPepper from "./GreenPepper/GreenPepper";
 import Mushroom from "./Mushroom/Mushroom";
-import img from "../../../img/pizza_bottom.png";
 
 const PizzaIndregient = ({ type, quantity, children }) => {
   const [pepperoniMargin, setPepperoniMargin] = useState([
