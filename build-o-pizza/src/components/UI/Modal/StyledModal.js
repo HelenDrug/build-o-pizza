@@ -10,6 +10,9 @@ export const StyledModal = styled.div`
   box-sizing: border-box;
   transition: all 0.4s ease;
   cursor: pointer;
+  transform: ${(props) =>
+    props.show ? "translateY(0)" : "translateY(-200vh)"};
+
   &:hover {
     box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.12);
     transform: scale(1.05);

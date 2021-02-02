@@ -20,6 +20,7 @@ const PizzaBuilder = () => {
     },
     totalPrice: 0,
     canBeBought: false,
+    ordered: false,
   });
 
   const updateBoughtState = (ingredients) => {
@@ -66,6 +67,15 @@ const PizzaBuilder = () => {
     });
   };
 
+  const orderHandler = () => {
+    setPizza({
+      ingredients: pizza.ingredients,
+      totalPrice: pizza.totalPrice,
+      canBeBought: pizza.canBeBought,
+      ordered: true,
+    });
+  };
+
   const disabledInfo = { ...pizza.ingredients };
   for (let key in disabledInfo) {
     disabledInfo[key] = disabledInfo[key] <= 0;
@@ -80,8 +90,9 @@ const PizzaBuilder = () => {
           disabled={disabledInfo}
           price={pizza.totalPrice}
           canBeBought={pizza.canBeBought}
+          ordered={orderHandler}
         />
-        <Modal ingredients={pizza.ingredients} />
+        <Modal ingredients={pizza.ingredients} show={pizza.ordered} />
       </ControlsWrapper>
     </>
   );

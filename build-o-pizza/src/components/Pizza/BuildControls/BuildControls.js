@@ -16,7 +16,9 @@ export const BuildControls = ({
   disabled,
   price,
   canBeBought,
+  ordered,
 }) => {
+  console.log(ordered);
   return (
     <StyledBuildControls>
       <StyledPrice>Current price: {price.toFixed(2)}</StyledPrice>
@@ -31,7 +33,9 @@ export const BuildControls = ({
           />
         );
       })}
-      <OrderButton disabled={!canBeBought}>ORDER NOW</OrderButton>
+      <OrderButton disabled={!canBeBought} onClick={ordered}>
+        ORDER NOW
+      </OrderButton>
     </StyledBuildControls>
   );
 };
