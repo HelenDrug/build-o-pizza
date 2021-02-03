@@ -16,6 +16,11 @@ export const StyledButton = styled.button`
     color: #ccc;
     cursor: default;
   }
+  :hover,
+  :active {
+    background-color: #99703f;
+    color: white;
+  }
   :hover:disabled {
     background-color: #ac9980;
     color: #ccc;
