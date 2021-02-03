@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
 export const StyledModal = styled.div`
+  position: fixed;
+  top: 30%;
   background-color: #fff;
-  width: 60%;
+  width: 30%;
   border-radius: 40px;
   box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.18);
+  z-index: 500;
   padding: 10px;
-  margin: 0 0 2rem 5rem;
+  margin-left: -20%;
   box-sizing: border-box;
-  transition: all 0.4s ease;
+  transition: all 0.7s ease;
   cursor: pointer;
   transform: ${(props) =>
     props.show ? "translateY(0)" : "translateY(-200vh)"};

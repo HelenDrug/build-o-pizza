@@ -76,12 +76,26 @@ const PizzaBuilder = () => {
     });
   };
 
+  const orderCancelHandler = () => {
+    setPizza({
+      ingredients: pizza.ingredients,
+      totalPrice: pizza.totalPrice,
+      canBeBought: pizza.canBeBought,
+      ordered: false,
+    });
+  };
+
   const disabledInfo = { ...pizza.ingredients };
   for (let key in disabledInfo) {
     disabledInfo[key] = disabledInfo[key] <= 0;
   }
   return (
     <>
+      <Modal
+        ingredients={pizza.ingredients}
+        show={pizza.ordered}
+        modalClosed={orderCancelHandler}
+      />
       <Pizza ingredients={pizza.ingredients} />
       <ControlsWrapper>
         <BuildControls
@@ -92,7 +106,6 @@ const PizzaBuilder = () => {
           canBeBought={pizza.canBeBought}
           ordered={orderHandler}
         />
-        <Modal ingredients={pizza.ingredients} show={pizza.ordered} />
       </ControlsWrapper>
     </>
   );

@@ -3,6 +3,8 @@ import { OrderText } from "./OrderText";
 import { OrderContent } from "./OrderContent";
 import { CheckOut } from "./CheckOut";
 import styled from "styled-components";
+import { OrderCancelButton } from "./OrderCancelButton";
+import { OrderAcceptButton } from "./OrderAcceptButton";
 
 const StyledOrderSummary = styled.div`
   display: flex;
@@ -24,6 +26,8 @@ export const OrderSummary = ({ ingredients }) => {
       <OrderText>This is your delicious pizza!</OrderText>
       <OrderContent ingredients={ingredients}></OrderContent>
       <CheckOut>Continue to CheckOut?</CheckOut>
+      <OrderCancelButton>CANCEL</OrderCancelButton>
+      <OrderAcceptButton>CONTINUE</OrderAcceptButton>
     </StyledOrderSummary>
   );
 };
