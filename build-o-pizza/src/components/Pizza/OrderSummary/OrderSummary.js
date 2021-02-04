@@ -3,7 +3,7 @@ import { OrderText } from "./OrderText";
 import { OrderContent } from "./OrderContent";
 import { CheckOut } from "./CheckOut";
 import styled from "styled-components";
-import { OrderButton } from "./OrderButton";
+import { SummaryButton } from "./SummaryButton";
 import { ButtonContainer } from "./ButtonContainer";
 
 const StyledOrderSummary = styled.div`
@@ -27,8 +27,8 @@ export const OrderSummary = ({ ingredients }) => {
       <OrderContent ingredients={ingredients}></OrderContent>
       <CheckOut>Continue to CheckOut?</CheckOut>
       <ButtonContainer>
-        <OrderButton>CANCEL</OrderButton>
-        <OrderButton>CONTINUE</OrderButton>
+        <SummaryButton>CANCEL</SummaryButton>
+        <SummaryButton>CONTINUE</SummaryButton>
       </ButtonContainer>
     </StyledOrderSummary>
   );
