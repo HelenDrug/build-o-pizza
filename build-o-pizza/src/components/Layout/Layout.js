@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ToolBar } from "../Navigation/ToolBar/ToolBar";
 
 const Content = styled.main`
   margin-bottom: 16px;
@@ -8,7 +9,8 @@ const Content = styled.main`
 const Layout = ({ children }) => {
   return (
     <>
-      <div>ToolBar, Sides</div>
+      <ToolBar />
+      <div>Sides</div>
       <Content>{children}</Content>
     </>
   );
