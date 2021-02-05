@@ -101,6 +101,7 @@ const PizzaBuilder = () => {
         modalClosed={orderCancelHandler}
         orderCancel={orderCancelHandler}
         orderContinue={orderContinueHandler}
+        price={pizza.totalPrice}
       />
       <Pizza ingredients={pizza.ingredients} />
       <ControlsWrapper>

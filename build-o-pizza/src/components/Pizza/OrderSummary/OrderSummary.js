@@ -5,6 +5,7 @@ import { CheckOut } from "./CheckOut";
 import styled from "styled-components";
 import { SummaryButton } from "./SummaryButton";
 import { ButtonContainer } from "./ButtonContainer";
+import { OrderPrice } from "./OrderPrice";
 
 const StyledOrderSummary = styled.div`
   display: flex;
@@ -19,12 +20,18 @@ const StyledOrderSummary = styled.div`
   }
 `;
 
-export const OrderSummary = ({ ingredients, orderCancel, orderContinue }) => {
+export const OrderSummary = ({
+  ingredients,
+  orderCancel,
+  orderContinue,
+  orderPrice,
+}) => {
   return (
     <StyledOrderSummary>
       <OrderHeader>Order Summary</OrderHeader>
       <OrderText>This is your delicious pizza!</OrderText>
       <OrderContent ingredients={ingredients}></OrderContent>
+      <OrderPrice>Total price: {orderPrice.toFixed(2)} EUR</OrderPrice>
       <CheckOut>Continue to CheckOut?</CheckOut>
       <ButtonContainer>
         <SummaryButton onClick={orderCancel}>CANCEL</SummaryButton>

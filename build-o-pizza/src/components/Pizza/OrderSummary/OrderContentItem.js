@@ -15,7 +15,7 @@ const OrderContentItemList = styled.li`
 `;
 
 const OrderItemIngredient = styled.span`
-  font-weight: bold;
+  
 `;
 
 const OrderItemQuantity = styled.span`
