@@ -85,6 +85,10 @@ const PizzaBuilder = () => {
     });
   };
 
+  const orderContinueHandler = () => {
+    alert("Lets continue!");
+  };
+
   const disabledInfo = { ...pizza.ingredients };
   for (let key in disabledInfo) {
     disabledInfo[key] = disabledInfo[key] <= 0;
@@ -95,6 +99,8 @@ const PizzaBuilder = () => {
         ingredients={pizza.ingredients}
         show={pizza.ordered}
         modalClosed={orderCancelHandler}
+        orderCancel={orderCancelHandler}
+        orderContinue={orderContinueHandler}
       />
       <Pizza ingredients={pizza.ingredients} />
       <ControlsWrapper>

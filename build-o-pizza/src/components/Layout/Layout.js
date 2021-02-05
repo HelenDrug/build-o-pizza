@@ -8,7 +8,7 @@ const Content = styled.main`
 const Layout = ({ children }) => {
   return (
     <>
-      <div>ToolBar, Sides, Backdrop</div>
+      <div>ToolBar, Sides</div>
       <Content>{children}</Content>
     </>
   );

@@ -19,7 +19,7 @@ const StyledOrderSummary = styled.div`
   }
 `;
 
-export const OrderSummary = ({ ingredients }) => {
+export const OrderSummary = ({ ingredients, orderCancel, orderContinue }) => {
   return (
     <StyledOrderSummary>
       <OrderHeader>Order Summary</OrderHeader>
@@ -27,8 +27,8 @@ export const OrderSummary = ({ ingredients }) => {
       <OrderContent ingredients={ingredients}></OrderContent>
       <CheckOut>Continue to CheckOut?</CheckOut>
       <ButtonContainer>
-        <SummaryButton>CANCEL</SummaryButton>
-        <SummaryButton>CONTINUE</SummaryButton>
+        <SummaryButton onClick={orderCancel}>CANCEL</SummaryButton>
+        <SummaryButton onClick={orderContinue}>CONTINUE</SummaryButton>
       </ButtonContainer>
     </StyledOrderSummary>
   );
