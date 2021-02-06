@@ -15,17 +15,13 @@ export const ToolBarWrapper = styled.div`
   z-index: 90;
   color: white;
 `;
-export const Header = styled.header``;
 
 export const Menu = styled.div``;
 
-export const Logo = styled.img`
-  height: 60px;
-  width: 60px;
-`;
-
-export const MainNav = styled.nav`
+export const Logo = styled.div`
   height: 100%;
 `;
 
-export const NavList = styled.ul``;
+export const LogoImg = styled.img`
+  height: 100%;
+`;

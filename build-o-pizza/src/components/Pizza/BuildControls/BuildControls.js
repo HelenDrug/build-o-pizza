@@ -1,7 +1,9 @@
-import { StyledBuildControls } from "./StyledBuildControls";
+import {
+  BuildControlsWrapper,
+  Price,
+  OrderButton,
+} from "./BuildControls.styles";
 import { BuildControl } from "./BuildControl/BuildControl";
-import { StyledPrice } from "./StyledPrice/StyledPrice";
-import { OrderButton } from "./OrderButton/OrderButton";
 
 const controlLabels = [
   { label: "Pepperoni", type: "pepperoni" },
@@ -20,8 +22,8 @@ export const BuildControls = ({
 }) => {
   console.log(ordered);
   return (
-    <StyledBuildControls>
-      <StyledPrice>Current price: {price.toFixed(2)}</StyledPrice>
+    <BuildControlsWrapper>
+      <Price>Current price: {price.toFixed(2)}</Price>
       {controlLabels.map((item) => {
         return (
           <BuildControl
@@ -36,6 +38,6 @@ export const BuildControls = ({
       <OrderButton disabled={!canBeBought} onClick={ordered}>
         ORDER NOW
       </OrderButton>
-    </StyledBuildControls>
+    </BuildControlsWrapper>
   );
 };

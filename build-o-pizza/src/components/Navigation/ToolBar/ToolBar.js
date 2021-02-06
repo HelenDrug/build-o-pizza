@@ -1,21 +1,15 @@
-import {
-  ToolBarWrapper,
-  Header,
-  Menu,
-  Logo,
-  MainNav,
-  NavList,
-} from "./ToolBar.styles";
+import { ToolBarWrapper, Menu, Logo, LogoImg } from "./ToolBar.styles";
 import img from "../../../img/pizza_logo.png";
+import { Nav } from "../Nav/Nav";
 
 export const ToolBar = () => {
   return (
     <ToolBarWrapper>
       <Menu>Menu</Menu>
-      <Logo src={img} />
-      <MainNav>
-        <NavList>...</NavList>
-      </MainNav>
+      <Logo>
+        <LogoImg src={img} alt="Pizza Logo" />
+      </Logo>
+      <Nav />
     </ToolBarWrapper>
   );
 };

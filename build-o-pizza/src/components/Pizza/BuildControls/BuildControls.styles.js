@@ -1,5 +1,22 @@
 import styled from "styled-components";
 
+export const BuildControlsWrapper = styled.div`
+  width: 60%;
+  border-radius: 40px;
+  background-color: #ffb26b;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-items: center;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.18);
+  margin: 5rem 0 2rem 5rem;
+`;
+
+export const Price = styled.p`
+  font-weight: bold;
+  margin: 1rem;
+`;
+
 export const OrderButton = styled.button`
   background-color: #ffd56b;
   outline: none;
@@ -39,3 +56,4 @@ export const OrderButton = styled.button`
     }
   }
 `;
+

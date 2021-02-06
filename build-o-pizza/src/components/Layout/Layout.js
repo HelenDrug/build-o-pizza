@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { ToolBar } from "../Navigation/ToolBar/ToolBar";
 
 const Content = styled.main`
-  margin-bottom: 16px;
   display: flex;
 `;
 
@@ -10,7 +9,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <ToolBar />
-      <div>Sides</div>
+      <div style={{ marginTop: "4rem", marginLeft: "1rem" }}>Sides</div>
       <Content>{children}</Content>
     </>
   );

@@ -1,7 +1,9 @@
-import { StyledBuildControl } from "./StyledBuildControl";
-import { StyledLabel } from "./StyledLabel/StyledLabel";
-import { ButtonAdd } from "./ButtonAdd/ButtonAdd";
-import { ButtonRemove } from "./ButtonRemove/ButtonRemove";
+import {
+  BuildControlWrapper,
+  Label,
+  ButtonAdd,
+  ButtonRemove,
+} from "./BuildControl.styles";
 
 export const BuildControl = ({
   label,
@@ -10,12 +12,12 @@ export const BuildControl = ({
   disabled,
 }) => {
   return (
-    <StyledBuildControl>
-      <StyledLabel>{label}</StyledLabel>
+    <BuildControlWrapper>
+      <Label>{label}</Label>
       <ButtonAdd onClick={ingredientAdded}>More</ButtonAdd>
       <ButtonRemove onClick={ingredientRemoved} disabled={disabled}>
         Less
       </ButtonRemove>
-    </StyledBuildControl>
+    </BuildControlWrapper>
   );
 };

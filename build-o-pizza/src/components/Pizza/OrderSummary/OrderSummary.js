@@ -1,24 +1,14 @@
-import { OrderHeader } from "./OrderHeader";
-import { OrderText } from "./OrderText";
 import { OrderContent } from "./OrderContent";
-import { CheckOut } from "./CheckOut";
-import styled from "styled-components";
-import { SummaryButton } from "./SummaryButton";
-import { ButtonContainer } from "./ButtonContainer";
-import { OrderPrice } from "./OrderPrice";
 
-const StyledOrderSummary = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-  @media only screen and (max-width: 500px) {
-    align-items: center;
-    padding: 0.5rem;
-  }
-`;
+import {
+  OrderSummaryWrapper,
+  OrderHeader,
+  OrderText,
+  OrderPrice,
+  CheckOut,
+  ButtonContainer,
+  SummaryButton,
+} from "./OrderSummary.styles";
 
 export const OrderSummary = ({
   ingredients,
@@ -27,7 +17,7 @@ export const OrderSummary = ({
   orderPrice,
 }) => {
   return (
-    <StyledOrderSummary>
+    <OrderSummaryWrapper>
       <OrderHeader>Order Summary</OrderHeader>
       <OrderText>This is your delicious pizza!</OrderText>
       <OrderContent ingredients={ingredients}></OrderContent>
@@ -37,6 +27,6 @@ export const OrderSummary = ({
         <SummaryButton onClick={orderCancel}>CANCEL</SummaryButton>
         <SummaryButton onClick={orderContinue}>CONTINUE</SummaryButton>
       </ButtonContainer>
-    </StyledOrderSummary>
+    </OrderSummaryWrapper>
   );
 };

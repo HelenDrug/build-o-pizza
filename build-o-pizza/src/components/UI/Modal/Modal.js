@@ -1,4 +1,4 @@
-import { StyledModal } from "./StyledModal";
+import { StyledModal } from "./Modal.styles";
 import { OrderSummary } from "../../Pizza/OrderSummary/OrderSummary";
 import { BackDrop } from "../Backdrop/Backdrop";
 
