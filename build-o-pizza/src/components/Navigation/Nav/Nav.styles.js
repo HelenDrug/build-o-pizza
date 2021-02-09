@@ -15,13 +15,3 @@ export const NavItem = styled.li`
   display: flex;
   align-items: center;
 `;
-
-export const NavLink = styled.a`
-  color: white;
-  text-decoration: none;
-  height: 100%;
-  padding: 16px 10px;
-  border-bottom: 4px solid transparent;
-  box-sizing: border-box;
-  display: block;
-`;

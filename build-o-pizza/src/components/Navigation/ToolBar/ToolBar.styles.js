@@ -17,11 +17,3 @@ export const ToolBarWrapper = styled.div`
 `;
 
 export const Menu = styled.div``;
-
-export const Logo = styled.div`
-  height: 100%;
-`;
-
-export const LogoImg = styled.img`
-  height: 100%;
-`;
