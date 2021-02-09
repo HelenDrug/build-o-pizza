@@ -1,11 +1,14 @@
-import { Logo } from "../Logo";
+import { Logo } from "../Logo/Logo";
 import { Nav } from "../Nav/Nav";
+import { SideDrawerLogoWrapper, SideDrawerWrapper } from "./SideDrawer.styles";
 
 export const SideDrawer = () => {
   return (
-    <LogoWrapper>
-      <Logo />
+    <SideDrawerWrapper>
+      <SideDrawerLogoWrapper>
+        <Logo />
+      </SideDrawerLogoWrapper>
       <Nav />
-    </LogoWrapper>
+    </SideDrawerWrapper>
   );
 };

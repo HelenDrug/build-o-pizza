@@ -1,15 +1,17 @@
 import styled from "styled-components";
 import { ToolBar } from "../Navigation/ToolBar/ToolBar";
+import { SideDrawer } from "../Navigation/SideDrawer/SideDrawer";
 
 const Content = styled.main`
   display: flex;
+  margin-top: 3rem;
 `;
 
 const Layout = ({ children }) => {
   return (
     <>
       <ToolBar />
-      <div style={{ marginTop: "4rem", marginLeft: "1rem" }}>Sides</div>
+      <SideDrawer />
       <Content>{children}</Content>
     </>
   );

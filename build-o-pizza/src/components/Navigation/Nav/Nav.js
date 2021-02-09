@@ -1,12 +1,11 @@
-import { NavList, NavItem } from "./Nav.styles";
-import { NavLink } from "./NavLink/NavLink";
+import { NavList, NavItem, NavLink } from "./Nav.styles";
 
 export const Nav = () => {
   return (
     <NavList>
       <NavItem>
-        <NavLink link="/">Pizza Builder</NavLink>
-        <NavLink link="/">Check Out</NavLink>
+        <NavLink href="/">Pizza Builder</NavLink>
+        <NavLink href="/">Check Out</NavLink>
       </NavItem>
     </NavList>
   );

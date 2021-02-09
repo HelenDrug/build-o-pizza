@@ -6,6 +6,7 @@ export const LogoWrapper = styled.div`
 `;
 
 export const LogoImg = styled.img`
+  
   height: 100%;
 `;
 

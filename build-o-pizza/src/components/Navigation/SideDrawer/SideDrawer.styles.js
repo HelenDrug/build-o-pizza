@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { LogoWrapper } from "../Logo/Logo";
 
-export const LogoWrapper = styled.div`
+export const SideDrawerWrapper = styled.div`
   position: fixed;
   width: 200px;
   max-width: 70%;
@@ -13,6 +14,19 @@ export const LogoWrapper = styled.div`
   transition: transform 0.3s ease-out;
 
   @media screen and (min-width: 500px) {
-      display: none;
+    display: none;
+
+    .Open {
+      transform: translateX(0);
+    }
+    .Close {
+      transform: translateX(-100);
+    }
   }
+`;
+
+export const SideDrawerLogoWrapper = styled(LogoWrapper)`
+  height: 11%;
+  display: flex;
+  justify-content: center;
 `;
