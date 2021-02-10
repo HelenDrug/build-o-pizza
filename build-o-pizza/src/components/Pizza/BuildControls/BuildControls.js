@@ -20,7 +20,6 @@ export const BuildControls = ({
   canBeBought,
   ordered,
 }) => {
-  console.log(ordered);
   return (
     <BuildControlsWrapper>
       <Price>Current price: {price.toFixed(2)}</Price>

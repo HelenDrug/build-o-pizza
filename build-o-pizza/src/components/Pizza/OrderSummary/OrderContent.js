@@ -9,9 +9,13 @@ const OrderContentList = styled.ul`
 export const OrderContent = ({ ingredients }) => {
   return (
     <OrderContentList>
-      {Object.keys(ingredients).map((item) => {
+      {Object.keys(ingredients).map((item, idx) => {
         return (
-          <OrderContentItem ingredient={item} quantity={ingredients[item]} />
+          <OrderContentItem
+            key={idx}
+            ingredient={item}
+            quantity={ingredients[item]}
+          />
         );
       })}
     </OrderContentList>

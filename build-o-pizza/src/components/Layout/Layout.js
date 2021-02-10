@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { ToolBar } from "../Navigation/ToolBar/ToolBar";
 import { SideDrawer } from "../Navigation/SideDrawer/SideDrawer";
+import { useState } from "react";
 
 const Content = styled.main`
   display: flex;
@@ -8,10 +9,15 @@ const Content = styled.main`
 `;
 
 const Layout = ({ children }) => {
+  const [showSideDrawer, setShowSideDrawer] = useState(true);
+
+  const closeSideDrawer = () => {
+    setShowSideDrawer(false);
+  };
   return (
     <>
       <ToolBar />
-      <SideDrawer />
+      <SideDrawer opened={showSideDrawer} closed={closeSideDrawer} />
       <Content>{children}</Content>
     </>
   );

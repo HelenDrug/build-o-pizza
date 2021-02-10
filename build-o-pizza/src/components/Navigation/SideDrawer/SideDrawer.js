@@ -1,14 +1,20 @@
 import { Logo } from "../Logo/Logo";
 import { Nav } from "../Nav/Nav";
 import { SideDrawerLogoWrapper, SideDrawerWrapper } from "./SideDrawer.styles";
+import { BackDrop } from "../../UI/Backdrop/Backdrop";
 
-export const SideDrawer = () => {
+export const SideDrawer = ({ opened, closed }) => {
+  const show = opened ? true : false;
+  console.log(show);
   return (
-    <SideDrawerWrapper>
-      <SideDrawerLogoWrapper>
-        <Logo />
-      </SideDrawerLogoWrapper>
-      <Nav />
-    </SideDrawerWrapper>
+    <>
+      <BackDrop show={opened} clicked={closed} display={show}/>
+      <SideDrawerWrapper>
+        <SideDrawerLogoWrapper>
+          <Logo />
+        </SideDrawerLogoWrapper>
+        <Nav />
+      </SideDrawerWrapper>
+    </>
   );
 };
