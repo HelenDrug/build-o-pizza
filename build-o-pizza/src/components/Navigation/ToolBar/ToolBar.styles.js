@@ -18,5 +18,3 @@ export const ToolBarWrapper = styled.div`
     display: none;
   }
 `;
-
-export const Menu = styled.div``;

@@ -5,11 +5,10 @@ import { BackDrop } from "../../UI/Backdrop/Backdrop";
 
 export const SideDrawer = ({ opened, closed }) => {
   const show = opened ? true : false;
-  console.log(show);
   return (
     <>
-      <BackDrop show={opened} clicked={closed} display={show}/>
-      <SideDrawerWrapper>
+      <BackDrop show={opened} clicked={closed} display={show} />
+      <SideDrawerWrapper show={show}>
         <SideDrawerLogoWrapper>
           <Logo />
         </SideDrawerLogoWrapper>

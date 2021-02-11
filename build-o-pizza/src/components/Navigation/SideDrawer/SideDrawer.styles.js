@@ -12,7 +12,8 @@ export const SideDrawerWrapper = styled.div`
   background-color: white;
   padding: 1rem 2rem;
   transition: transform 0.3s ease-out;
-  transform: ${(props) => (props.show ? "translateX(0)" : "translateX(-100)")};
+  transform: ${(props) =>
+    props.show ? "translateX(0)" : "translateX(-100vh)"};
 
   @media screen and (min-width: 500px) {
     display: none;
