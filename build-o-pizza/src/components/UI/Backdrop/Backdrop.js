@@ -9,7 +9,7 @@ export const StyledBackDrop = styled.div`
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   @media screen and (min-width: 500px) {
-    display: ${(props) => (!props.display ? "block" : "none")};
+    display: ${(props) => (props.display ? "block" : "none")};
   }
 `;
 

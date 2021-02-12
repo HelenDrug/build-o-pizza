@@ -12,7 +12,7 @@ export const Modal = ({
 }) => {
   return (
     <>
-      <BackDrop show={show} clicked={modalClosed} display={!show} />
+      <BackDrop show={show} clicked={modalClosed} display={show} />
       <StyledModal show={show}>
         <OrderSummary
           ingredients={ingredients}

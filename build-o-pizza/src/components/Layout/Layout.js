@@ -14,6 +14,11 @@ const Layout = ({ children }) => {
   const closeSideDrawer = () => {
     setShowSideDrawer(false);
   };
+
+  const toggleSideDrawer = () => {
+    console.log("i have been toggled");
+    showSideDrawer ? setShowSideDrawer(false) : setShowSideDrawer(true);
+  };
   return (
     <>
       <ToolBar />

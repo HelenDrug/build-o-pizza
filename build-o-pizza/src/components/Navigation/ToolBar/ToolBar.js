@@ -1,12 +1,12 @@
 import { ToolBarWrapper } from "./ToolBar.styles";
 import { Nav } from "../Nav/Nav";
 import { Logo } from "../Logo/Logo";
-import { DrawerToggle } from "../SideDrawer/DrawerToggle/DrawerToggle";
+import { Menu } from "../Menu/Menu";
 
 export const ToolBar = () => {
   return (
     <ToolBarWrapper>
-      <DrawerToggle />
+      <Menu />
       <Logo />
       <Nav />
     </ToolBarWrapper>
