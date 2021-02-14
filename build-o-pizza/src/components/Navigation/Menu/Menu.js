@@ -1,5 +1,5 @@
 import { MenuDropDown } from "./MenuDropDown";
-import { MenuWrapper, MenuButton } from "./Menu.styles";
+import { MenuWrapper, MenuButton, Line } from "./Menu.styles";
 import { useState } from "react";
 
 export const Menu = () => {
@@ -10,7 +10,11 @@ export const Menu = () => {
   };
   return (
     <MenuWrapper>
-      <MenuButton onClick={menuButtonClick}>MENU</MenuButton>
+      <MenuButton onClick={menuButtonClick}>
+        <Line></Line>
+        <Line></Line>
+        <Line></Line>
+      </MenuButton>
       <MenuDropDown display={display} />
     </MenuWrapper>
   );

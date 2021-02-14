@@ -19,6 +19,19 @@ export const MenuDropDownWrapper = styled.div`
 
 export const MenuButton = styled.div`
   cursor: pointer;
+  width: 3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+export const Line = styled.div`
+  width: 80%;
+  height: 3px;
+  background-color: white;
+  margin: 0.2rem;
 `;
 
 export const NavList = styled.ul`
