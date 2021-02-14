@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <ToolBar />
-      <SideDrawer opened={showSideDrawer} closed={closeSideDrawer} />
+      {/* <SideDrawer opened={showSideDrawer} closed={closeSideDrawer} /> */}
       <Content>{children}</Content>
     </>
   );

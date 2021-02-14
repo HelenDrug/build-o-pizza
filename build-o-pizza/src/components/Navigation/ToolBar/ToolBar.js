@@ -6,9 +6,9 @@ import { Menu } from "../Menu/Menu";
 export const ToolBar = () => {
   return (
     <ToolBarWrapper>
+      <Nav/>
       <Menu />
       <Logo />
-      <Nav />
     </ToolBarWrapper>
   );
 };

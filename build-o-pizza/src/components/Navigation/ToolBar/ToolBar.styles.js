@@ -14,7 +14,4 @@ export const ToolBarWrapper = styled.div`
   box-sizing: border-box;
   z-index: 90;
   color: white;
-  @media screen and (max-width: 499px) {
-    display: none;
-  }
 `;

@@ -6,6 +6,9 @@ export const NavList = styled.ul`
   list-style: none;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 499px) {
+    display: none;
+  }
 `;
 
 export const NavItem = styled.li`

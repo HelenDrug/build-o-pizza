@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {LogoWrapper} from "../Logo/Logo"
 
 export const MenuWrapper = styled.div``;
 
@@ -16,6 +17,11 @@ export const MenuDropDownWrapper = styled.div`
   transform: ${(props) =>
     props.display ? "translateX(0)" : "translateX(-200vh)"};
 `;
+export const MenuLogoWrapper = styled(LogoWrapper)`
+height: 11%;
+display: flex;
+justify-content: center;
+`;
 
 export const MenuButton = styled.div`
   cursor: pointer;
@@ -25,6 +31,9 @@ export const MenuButton = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  @media screen and (min-width: 500px) {
+    display: none;
+  }
 `;
 
 export const Line = styled.div`
