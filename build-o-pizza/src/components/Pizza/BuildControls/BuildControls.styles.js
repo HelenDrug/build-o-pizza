@@ -9,7 +9,16 @@ export const BuildControlsWrapper = styled.div`
   align-items: center;
   justify-items: center;
   box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.18);
-  margin: 5rem 0 2rem 5rem;
+  margin: 5rem;
+  @media screen and (min-width: 800px) {
+    margin-left: 0;
+  }
+  @media screen and (min-width: 850px) {
+    margin-left: 3rem;
+  }
+  @media screen and (min-width: 1000px) {
+    margin-left: 7rem;
+  }
 `;
 
 export const Price = styled.p`
@@ -56,4 +65,3 @@ export const OrderButton = styled.button`
     }
   }
 `;
-

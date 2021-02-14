@@ -4,7 +4,6 @@ import styled from "styled-components";
 const StyledPizza = styled.div`
   width: 32rem;
   height: 32rem;
-  margin: 0 2rem 0 2rem;
   text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
@@ -30,9 +29,7 @@ const Pizza = ({ ingredients }) => {
 
   return (
     <StyledPizza>
-      <PizzaIngredient type="pizzaBottom">
-        {ingredientsArray}
-      </PizzaIngredient>
+      <PizzaIngredient type="pizzaBottom">{ingredientsArray}</PizzaIngredient>
     </StyledPizza>
   );
 };

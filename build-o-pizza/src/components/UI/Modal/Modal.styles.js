@@ -23,7 +23,8 @@ export const StyledModal = styled.div`
     color: #fff;
   }
 
-  @media (min-width: 600px) {
-    left: 58%;
+  @media screen and (min-width: 300px) {
+    left: 45%;
+    width: 50%;
   }
 `;
