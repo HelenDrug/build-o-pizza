@@ -11,9 +11,7 @@ export const Modal = ({
   orderContinue,
   price,
 }) => {
-  useEffect(() => {
-    console.log("[Modal] will update");
-  }, [show]);
+  useEffect(() => {}, [show]);
   return (
     <>
       <BackDrop show={show} clicked={modalClosed} display={show} />

@@ -5,18 +5,18 @@ import { Modal } from "../../components/UI/Modal/Modal";
 import { ControlsWrapper } from "./ControlsWrapper";
 
 const INGREDIENT_PRICE = {
-  pepperoni: 1,
-  cheese: 0.5,
-  mushroom: 0.3,
-  greenPepper: 0.3,
+  pepperoni: 0.1,
+  cheese: 0.05,
+  mushroom: 0.05,
+  greenPepper: 0.05,
 };
 const PizzaBuilder = () => {
   const [pizza, setPizza] = useState({
     ingredients: {
       pepperoni: 0,
-      cheese: 0,
       mushroom: 0,
       greenPepper: 0,
+      cheese: 0,
     },
     totalPrice: 0,
     canBeBought: false,
@@ -42,6 +42,7 @@ const PizzaBuilder = () => {
   };
 
   const addIngredient = (type) => {
+    if (type === "cheese" && pizza.ingredients[type] >= 5) return;
     if (pizza.ingredients[type] >= 10) return;
     const updatedCount = pizza.ingredients[type] + 1; // we take old count and add 1 to it
     const updatedIngredients = { ...pizza.ingredients };

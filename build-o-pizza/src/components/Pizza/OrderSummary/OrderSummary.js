@@ -17,7 +17,7 @@ export const OrderSummary = ({
   orderContinue,
   orderPrice,
 }) => {
-  useEffect(() => console.log("[OrderSummary] will update"), []);
+  useEffect(() => {}, []);
   return (
     <OrderSummaryWrapper>
       <OrderHeader>Order Summary</OrderHeader>

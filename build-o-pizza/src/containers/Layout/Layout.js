@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ToolBar } from "../Navigation/ToolBar/ToolBar";
+import { ToolBar } from "../../components/Navigation/ToolBar/ToolBar";
 
 const Content = styled.main`
   display: flex;

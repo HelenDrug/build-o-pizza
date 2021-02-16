@@ -46,6 +46,14 @@ const PizzaIndregient = ({ type, quantity, children }) => {
     { margin: "220px 0 0 300px", transform: "115deg" },
   ]);
 
+  const [cheeseMargin, setCheeseMargin] = useState([
+    { margin: "60px 0 0 10px" },
+    { margin: "150px 0 0 -100px" },
+    { margin: "150px 0 0 121px" },
+    { margin: "250px 0 0 -50px" },
+    { margin: "260px 0 0 80px" },
+  ]);
+
   const filteredMargin = (quantity, array) => {
     let MarginsArray = [...array];
     let newMarginsArray = [];
@@ -117,7 +125,17 @@ const PizzaIndregient = ({ type, quantity, children }) => {
       break;
 
     case "cheese":
-      ingredient = <Cheese>{console.log("Cheese from Ingredients")}</Cheese>;
+      ingredient = (
+        <>
+          {filteredMargin(quantity, cheeseMargin).map((margin, idx) => {
+            return (
+              <Cheese key={idx} cheeseMargin={margin.margin}>
+                1
+              </Cheese>
+            );
+          })}
+        </>
+      );
       break;
     default:
       ingredient = null;
