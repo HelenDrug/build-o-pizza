@@ -7,7 +7,7 @@ import GreenPepper from "./GreenPepper/GreenPepper";
 import Mushroom from "./Mushroom/Mushroom";
 
 const PizzaIndregient = ({ type, quantity, children }) => {
-  const [pepperoniMargin, setPepperoniMargin] = useState([
+  const [pepperoniMargin] = useState([
     "55px 0 0 135px",
     "55px 0 0 230px",
     "115px 0 0 50px",
@@ -20,7 +20,7 @@ const PizzaIndregient = ({ type, quantity, children }) => {
     "350px 0 0 180px",
   ]);
 
-  const [pepperMargin, setPepperMargin] = useState([
+  const [pepperMargin] = useState([
     { margin: "170px 0 0 100px", transform: "22deg" },
     { margin: "250px 0 0 300px", transform: "-47deg" },
     { margin: "195px 0 0 200px", transform: "115deg" },
@@ -33,7 +33,7 @@ const PizzaIndregient = ({ type, quantity, children }) => {
     { margin: "300px 0 0 150px", transform: "289deg" },
   ]);
 
-  const [mushroomMargin, setMushroomMargin] = useState([
+  const [mushroomMargin] = useState([
     { margin: "167px 0 0 50px", transform: "22deg" },
     { margin: "80px 0 0 270px", transform: "-47deg" },
     { margin: "67px 0 0 171px", transform: "15deg" },
@@ -46,7 +46,7 @@ const PizzaIndregient = ({ type, quantity, children }) => {
     { margin: "220px 0 0 300px", transform: "115deg" },
   ]);
 
-  const [cheeseMargin, setCheeseMargin] = useState([
+  const [cheeseMargin] = useState([
     { margin: "60px 0 0 10px" },
     { margin: "150px 0 0 -100px" },
     { margin: "150px 0 0 121px" },
