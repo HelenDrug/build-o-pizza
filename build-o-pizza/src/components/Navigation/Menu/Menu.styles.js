@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {LogoWrapper} from "../Logo/Logo"
+import { LogoWrapper } from "../Logo/Logo";
 
 export const MenuWrapper = styled.div``;
 
@@ -18,9 +18,9 @@ export const MenuDropDownWrapper = styled.div`
     props.display ? "translateX(0)" : "translateX(-200vh)"};
 `;
 export const MenuLogoWrapper = styled(LogoWrapper)`
-height: 11%;
-display: flex;
-justify-content: center;
+  height: 11%;
+  display: flex;
+  justify-content: center;
 `;
 
 export const MenuButton = styled.div`
@@ -48,11 +48,12 @@ export const NavList = styled.ul`
   padding: 0;
   list-style: none;
   display: flex;
+  flex-direction: column;
   align-items: center;
 `;
 
 export const NavItem = styled.li`
-  margin: 10px 0;
+  margin: 5px 0;
   box-sizing: border-box;
   width: 100%;
   display: block;

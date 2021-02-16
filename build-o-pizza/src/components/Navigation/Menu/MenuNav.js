@@ -5,6 +5,8 @@ export const MenuNav = () => {
     <NavList>
       <NavItem>
         <NavLink href="/">Pizza Builder</NavLink>
+      </NavItem>
+      <NavItem>
         <NavLink href="/">Check Out</NavLink>
       </NavItem>
     </NavList>
