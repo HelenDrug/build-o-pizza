@@ -7,7 +7,7 @@ const Mushroom = ({ mushroomMargin, mushroomTransform }) => {
       mushroomMargin={mushroomMargin}
       mushroomTransform={mushroomTransform}
     >
-      <img src={img} />
+      <img src={img} alt="Mushroom" />
     </SimpleMushroom>
   );
 };
