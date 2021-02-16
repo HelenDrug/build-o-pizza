@@ -1,4 +1,5 @@
 import { OrderContent } from "./OrderContent";
+import { useEffect } from "react";
 
 import {
   OrderSummaryWrapper,
@@ -16,6 +17,7 @@ export const OrderSummary = ({
   orderContinue,
   orderPrice,
 }) => {
+  useEffect(() => console.log("[OrderSummary] will update"), []);
   return (
     <OrderSummaryWrapper>
       <OrderHeader>Order Summary</OrderHeader>

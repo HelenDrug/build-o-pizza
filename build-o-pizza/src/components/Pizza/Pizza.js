@@ -7,6 +7,10 @@ const StyledPizza = styled.div`
   text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
+  margin: 2.5rem 0 0 2.5rem;
+  @media screen and (max-width: 500px) {
+    margin: 2.5rem 0;
+  }
 `;
 
 const Pizza = ({ ingredients }) => {

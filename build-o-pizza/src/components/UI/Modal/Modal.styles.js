@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledModal = styled.div`
   position: fixed;
   top: 30%;
+  left: 55%;
   background-color: #fff;
   width: 30%;
   border-radius: 40px;
@@ -23,7 +24,7 @@ export const StyledModal = styled.div`
     color: #fff;
   }
 
-  @media screen and (min-width: 300px) {
+  @media screen and (max-width: 700px) {
     left: 45%;
     width: 50%;
   }
