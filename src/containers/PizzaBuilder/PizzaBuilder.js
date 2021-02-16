@@ -38,6 +38,9 @@ const PizzaBuilder = () => {
 
       case "REMOVE":
         return pizza.totalPrice - INGREDIENT_PRICE[ingredientType];
+
+      default:
+        break;
     }
   };
 
